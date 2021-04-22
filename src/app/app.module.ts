@@ -1,27 +1,24 @@
+import { SharedModule } from './shared/shared.module';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductService } from './product.service';
-import { ProductComponent } from './components/product/product.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    NavbarComponent,
-    SearchbarComponent
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    AppRoutingModule,
+    SharedModule
   ],
-  providers: [ProductService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
