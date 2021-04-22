@@ -10,18 +10,17 @@ export class CartService {
   cartCount: number;
   constructor(private storage: StorageService) {
     if (this.isCartStorageEmpty()){
-      this.items = []
+      this.items = [];
     }else{
       this.items = this.storage.get('cart');
     }
   }
 
+
   addToCart(product: Product): void{
-    const index = this.items.findIndex(
-      (item) => item.id === product.id
-    );
-    if (index >= 0 ){
-      window.alert(`Le produit ${product.id} est déjà ajouté`);
+    const prodInCart = this.items.find ( (item) => { return item.id === product.id  });
+    if (prodInCart){
+      window.alert(`${product.title} est déjà ajouté`);
       return;
     }
     this.isCartStorageEmpty();
@@ -32,7 +31,7 @@ export class CartService {
 
   isCartStorageEmpty(): boolean {
     const res = this.storage.get('cart');
-    if (!res || res.length !== 0 ){
+    if (!res ){
       this.storage.set('cart', []);
       return true;
     } else {
@@ -64,6 +63,6 @@ export class CartService {
   getCartLength(): number{
     this.isCartStorageEmpty();
     const res = this.storage.get('cart');
-    return this.cartCount= res.length;
+    return this.cartCount = res.length;
   }
 }
