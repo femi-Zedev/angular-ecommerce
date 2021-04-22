@@ -1,0 +1,10 @@
+<div *ngIf="product" class="card card-product-grid">
+  <a class="img-wrap"> <img src="{{product.imageUrl}}"> </a>
+  <div class="card-product-details">
+    <figcaption class="info-wrap">
+      <a class="title">{{product.title}}</a>
+      <div class="price mt-1">${{product.price}}</div>
+    </figcaption>
+    <button type="button" class="{{btnClass}}" (click)="onButtonClick(product)">{{buttonText}}</button>
+  </div>
+</div>

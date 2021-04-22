@@ -1,0 +1,24 @@
+<app-navbar [prodActive]="'active'" [cartActive]="''" (onSearchTyping)="searchProduct($event)" ></app-navbar>
+<section class="section-name padding-y-sm">
+  <div class="container">
+
+  <header class="section-heading">
+      <a href="#" class="btn btn-outline-primary float-right">See all</a>
+      <h3 class="section-title">Our products</h3>
+  </header><!-- sect-heading -->
+
+
+      <div *ngIf="searchResult.length === 0" class="row">
+        <div class="col-md-3" *ngFor="let prod of products">
+           <app-product [product]="prod" [btnClass]="'btn btn-warning'" [buttonText]="buttonAdd" (buttonClicked)="addProduct(prod)"></app-product>
+        </div>
+      </div>
+
+      <div *ngIf="searchResult.length !== 0" class="row">
+        <div class="col-md-3" *ngFor="let searchedProd of searchResult">
+           <app-product [product]="searchedProd" [btnClass]="'btn btn-warning'" [buttonText]="buttonAdd" (buttonClicked)="addProduct(prod)"></app-product>
+        </div>
+      </div>
+
+  </div><!-- container // -->
+  </section>

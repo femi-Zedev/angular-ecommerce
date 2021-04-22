@@ -15,6 +15,12 @@ a:hover {
   text-decoration: none;
 }
 
+.active {
+  color: #3167eb !important;
+}
+
+
+
 .img-wrap {
   text-align: center;
   display: block;
@@ -431,6 +437,11 @@ p:last-child {
   margin-right: 7px;
   max-height: 42px;
   display: inline-block;
+}
+
+.logo {
+  width: 58px;
+  margin: 10px 0;
 }
 
 .navbar-main .nav-link {

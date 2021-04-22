@@ -1,13 +1,14 @@
-import { ProductService } from './services/product.service';
 import { Component, OnInit } from '@angular/core';
-import { Product } from './models/product.interface';
+import { Product } from 'src/app/models/product.interface';
+import { ProductService } from 'src/app/services/product.service';
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main-layout',
+  templateUrl: './main-layout.component.html',
+  styleUrls: ['./main-layout.component.css']
 })
-export class AppComponent implements OnInit{
+export class MainLayoutComponent implements OnInit {
   title = 'e-commerce';
   products: Product[] = [];
   searchResult: Product[] = [];
