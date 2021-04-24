@@ -1,7 +1,9 @@
 import { CartService } from './../../services/cart.service';
 import { StorageService } from './../../services/storage.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.interface';
+import { AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'lottie-web';
 
 @Component({
   selector: 'app-cart',
@@ -13,9 +15,18 @@ export class CartComponent implements OnInit, OnDestroy {
   buttonRemove = 'Supprimer';
   cartProducts: Product[];
 
+  public lottieConfig: AnimationOptions = {
+    path: 'assets/images/animations/empty-cart.json',
+    renderer: 'canvas',
+    autoplay: true,
+    loop: true
+};
+  private animation: AnimationItem;
+
   constructor(
     private cartService: CartService,
-    private storage: StorageService
+    private storage: StorageService,
+    private ngZone: NgZone
   ) {
 
   }
@@ -37,5 +48,19 @@ export class CartComponent implements OnInit, OnDestroy {
     // const cart = this.cartService.getItems();
     // this.storage.set('cart', cart);
   }
+
+  handleAnimation(animation: AnimationItem): void{
+    console.log(animation);
+    this.animation = animation;
+  }
+
+  pause(): void{
+    this.ngZone.runOutsideAngular(() => { this.animation.pause(); } );
+  }
+
+  play(): void{
+    this.ngZone.runOutsideAngular(() => { this.animation.play(); } );
+  }
+
 
 }

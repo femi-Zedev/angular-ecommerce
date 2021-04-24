@@ -1,17 +1,33 @@
 <app-navbar [prodActive]="''" [cartActive]="'active'" (onSearchTyping)="searchProduct($event)"></app-navbar>
 <section class="section-name padding-y-sm">
+
   <div class="container">
 
-  <header class="section-heading">
-      <h3 class="section-title">Mon panier</h3>
-  </header><!-- sect-heading -->
+    <header class="section-heading">
+        <h3 class="section-title">Mon panier</h3>
+    </header><!-- sect-heading -->
 
-  <div class="row">
-    <div class="col-md-3" *ngFor="let cartProd of cartProducts">
-      <app-product [product]="cartProd" [btnClass]="'btn btn-danger'" [buttonText]="buttonRemove" (buttonClicked)="removeItem(cartProd.id)"></app-product>
-   </div>
+    <div class="row" *ngIf="cartProducts.length > 0">
+      <div class="col-md-3" *ngFor="let cartProd of cartProducts">
+        <app-product [product]="cartProd" [btnClass]="'btn btn-danger'" [buttonText]="buttonRemove" (buttonClicked)="removeItem(cartProd.id)"></app-product>
+      </div>
+    </div>
+
+    <div class="container text-center" *ngIf="cartProducts.length === 0">
+
+      <ng-lottie
+          [options]="lottieConfig"
+          (animationCreated)="handleAnimation($event)"
+          containerClass="lottie-view">
+      </ng-lottie>
+      <h4 class="empty-cart-text">Opps votre panier est vide! <br> Veuillez ajoutez des produits</h4>
+      <div id="player">
+        <!-- <button (click)="pause()">pause</button>
+        <button (click)="play()">play</button> -->
+      </div>
+
+    </div>
+
   </div>
 
-
-  </div><!-- container // -->
-  </section>
+</section>
