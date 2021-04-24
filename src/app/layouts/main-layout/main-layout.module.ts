@@ -5,13 +5,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MainLayoutRoutingModule } from './main-layout-routing.module';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory(){
+  return player;
+}
 
 
 @NgModule({
   imports: [
-    SharedModule,
     CommonModule,
-    MainLayoutRoutingModule
+    SharedModule,
+    MainLayoutRoutingModule,
+    LottieModule.forRoot({player: playerFactory})
   ],
   declarations: [
     ProductListComponent,

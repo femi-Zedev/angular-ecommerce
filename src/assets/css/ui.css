@@ -444,6 +444,11 @@ p:last-child {
   margin: 10px 0;
 }
 
+.lottie-view{
+  max-width: 450px;
+  margin: auto;
+}
+
 .navbar-main .nav-link {
   font-weight: 500;
   color: #1c1c1c;
