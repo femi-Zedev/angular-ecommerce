@@ -13,7 +13,7 @@ import { AnimationItem } from 'lottie-web';
 export class CartComponent implements OnInit, OnDestroy {
   searchResult: Product[] = [];
   buttonRemove = 'Supprimer';
-  cartProducts: Product[];
+  cartProducts: Product[] = [];
 
   public lottieConfig: AnimationOptions = {
     path: 'assets/images/animations/empty-cart.json',

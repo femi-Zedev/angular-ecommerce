@@ -12,7 +12,7 @@
           <div class="widgets-wrap float-md-right">
               <div [routerLink]="['/cart']" class="widget-header  mr-3">
                   <a class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart {{cartActive}}"></i></a>
-                  <span class="badge badge-pill badge-danger notify">{{cartService.cartCount}}</span>
+                  <span class="badge badge-pill badge-danger notify">{{cartService.getCartLength()}}</span>
               </div>
               <div class="widget-header icontext">
                   <a [routerLink]="['/product-list']"  class="icon icon-sm rounded-circle border"><i class="fas fa-store {{prodActive}}"></i></a>

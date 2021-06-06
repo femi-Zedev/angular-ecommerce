@@ -1,0 +1,32 @@
+<div>
+  <div class="info-wrap">
+    <!-- Product Info -->
+    <div class="cart-section product-info">
+      <img [src]="product.imageUrl">
+      <p class="item-number">Some valuable info</p>
+      <h3 class="item-name">{{product.title}}</h3>
+      <div class="quantity-price row">
+        <app-quantity-input class="quantity-input" (valueChanged)="quantityChange($event)" [defaultValue]="1"></app-quantity-input>
+        <div class="price-wrapper">
+          <p class="qty">
+            x {{product.price}}$
+          </p>
+        </div>
+      </div>
+      <p class="stock-status">En stock</p>
+    </div>
+    <!-- Total Price -->
+
+    <div class="cart-section price-total">
+      <p>${{amount}}</p>
+    </div>
+
+
+    <div class="cart-section remove-wrap">
+      <!-- <a class="remove-button" (click)="removeItem(item)">x</a> -->
+      <button type="button" class="close" aria-label="Close"><span aria-hidden="true" (click)="removeItem(product.id)"
+          tooltip="Remove">&times;</span>
+      </button>
+    </div>
+  </div>
+</div>

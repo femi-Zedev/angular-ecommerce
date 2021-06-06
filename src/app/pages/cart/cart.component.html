@@ -1,5 +1,5 @@
 <app-navbar [prodActive]="''" [cartActive]="'active'" (onSearchTyping)="searchProduct($event)"></app-navbar>
-<section class="section-name padding-y-sm">
+<section class="cart-section padding-y-sm">
 
   <div class="container">
 
@@ -7,9 +7,14 @@
         <h3 class="section-title">Mon panier</h3>
     </header><!-- sect-heading -->
 
-    <div class="row" *ngIf="cartProducts.length > 0">
-      <div class="col-md-3" *ngFor="let cartProd of cartProducts">
-        <app-product [product]="cartProd" [btnClass]="'btn btn-danger'" [buttonText]="buttonRemove" (buttonClicked)="removeItem(cartProd.id)"></app-product>
+
+    <div class="cart-content row" *ngIf="cartProducts.length > 0">
+      <div class="col-md-8 col-sm-12" >
+        <!-- <app-product [product]="cartProd" [btnClass]="'btn btn-danger'" [buttonText]="buttonRemove" (buttonClicked)="removeItem(cartProd.id)"></app-product> -->
+        <app-cart-product *ngFor="let cartProd of cartProducts" [product]="cartProd" (removeClicked)="removeItem(cartProd.id)"></app-cart-product>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <cart-summary></cart-summary>
       </div>
     </div>
 

@@ -16,7 +16,11 @@ const mainRoutes: Routes = [
   {
     path: 'cart',
     component: CartComponent
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'product-list'
+  },
 ];
 
 @NgModule({

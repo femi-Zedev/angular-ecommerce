@@ -1,3 +1,4 @@
+import { CartService } from './../../services/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.interface';
 import { ProductService } from 'src/app/services/product.service';
@@ -13,7 +14,7 @@ export class MainLayoutComponent implements OnInit {
   products: Product[] = [];
   searchResult: Product[] = [];
 
-  constructor(private prodService: ProductService) { }
+  constructor(private prodService: ProductService, public cartService: CartService) { }
 
   ngOnInit(): void{
     this.prodService.getProducts().subscribe( (res) => {

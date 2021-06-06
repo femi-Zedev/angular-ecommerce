@@ -867,8 +867,7 @@ a[class*=card]:hover .title {
   max-width: 100%;
   width: auto;
   display: inline-block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: contain;
 }
 
 /* GRID STYLE PRODUCT ITEM */

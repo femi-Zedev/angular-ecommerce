@@ -24,7 +24,17 @@ export class CartService {
       return;
     }
     this.isCartStorageEmpty();
+    product.quantity = 1;
     this.items.push(product);
+    this.storage.set('cart', this.items);
+    this.getCartLength();
+  }
+
+  updateProductQuantity(prod: Product, qty: number): void {
+    const index = this.items.findIndex(
+      (item) => item.id === prod.id
+    );
+    this.items[index].quantity = qty;
     this.storage.set('cart', this.items);
     this.getCartLength();
   }
@@ -48,6 +58,15 @@ export class CartService {
     this.getCartLength();
   }
 
+  getSummary(): number {
+    let total = 0;
+    this.items.forEach( (prod: Product) => {
+      const interAmount = prod.quantity * parseInt(prod.price, 10);
+      total += interAmount;
+    });
+    return total;
+  }
+
   getItems(): any {
     if (this.isCartStorageEmpty()){
       return console.log('Panier vide');
@@ -65,4 +84,5 @@ export class CartService {
     const res = this.storage.get('cart');
     return this.cartCount = res.length;
   }
+
 }
