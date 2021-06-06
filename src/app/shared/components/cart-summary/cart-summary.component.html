@@ -1,0 +1,27 @@
+<section class="order-summary">
+  <div class="section-header">
+      <h3 class="section-title">Récapitulatif de la commande</h3>
+  </div>
+  <div class="section-body">
+      <div>
+          <div class="price-info">
+              <span class="pull-left">Total brut</span>
+              <span class="pull-right">${{total}}</span>
+          </div>
+          <div class="price-info">
+              <span class="pull-left">Livraison</span>
+              <span class="pull-right">$20</span>
+          </div>
+          <!-- <div class="price-info">
+              <span class="pull-left">Tax({{taxPercentage}}%)</span>
+              <span class="pull-right">${{tax}}</span>
+          </div> -->
+          <hr>
+          <div class="price-info total">
+              <span class="pull-left">Total</span>
+              <span class="pull-right">${{total + 20}}</span>
+          </div>
+          <a class="btn btn-success btn-check-out" [routerLink]="['/payment']" (click)="onCheckOut()">PASSER AU PAIEMENT</a>
+      </div>
+  </div>
+</section>

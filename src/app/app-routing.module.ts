@@ -11,13 +11,9 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
+    path: 'main-layout',
     component: MainLayoutComponent,
     loadChildren: () => import('./layouts/main-layout/main-layout.module').then((m) => m.MainLayoutModule)
-  },
-  {
-    path: '**',
-    redirectTo: 'main-layout'
   },
 
 ];

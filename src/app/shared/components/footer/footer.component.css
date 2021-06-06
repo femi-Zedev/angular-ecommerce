@@ -1,0 +1,17 @@
+footer{
+  background-color: #222;
+  color: #fff;
+}
+
+.section-footer .title {
+  font-size: 15px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.section-footer ul a {
+  font-size: 13px;
+  line-height: 1.923;
+  color: #b2b2b2;
+}

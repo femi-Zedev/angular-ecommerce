@@ -1,0 +1,89 @@
+.btn-continue {
+  margin-bottom: 10px;
+}
+
+.order-summary {
+  border-radius: 0px;
+  border: 1px solid #ededed;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  margin: 10px auto;
+}
+
+.section-header {
+  padding: 10px 15px;
+  margin: 0 -15px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #13b8aa24;
+  line-height: 26px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+
+  .section-title {
+    padding: 2px 0;
+    font-weight: 500;
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+    color: #696868;
+  }
+}
+
+.section-body {
+  padding: 15px 0 0 0;
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  hr {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+
+  .price-info {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .total {
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .btn-check-out {
+    background-color: #13b8aa;
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+
+  .btn-check-out:hover {
+    background-color: #13b8aa;
+    border-color: #13b8aa;
+  }
+
+}
+
+.pull-left {
+  float: left;
+  letter-spacing: 1px;
+}
+
+.pull-right {
+  float: right;
+  letter-spacing: 1px;
+}

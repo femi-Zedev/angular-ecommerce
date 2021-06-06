@@ -1,2 +1,4 @@
   <router-outlet></router-outlet>
   <app-footer></app-footer>
+
+  <a class="hidden-xs cart" [routerLink]="['/cart']"><span class="counter">{{cartService.getCartLength()}}</span></a>

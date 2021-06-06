@@ -1,0 +1,19 @@
+<label *ngIf="header" class="input-header">{{header}}</label>
+<div class="input-group w-25">
+    <!-- - button -->
+    <span class="input-group-btn ">
+        <button type="button" class="btn btn-default btn-number btn-left" [disabled]="value === 1" (click)="onMinus()">
+            <span class="fas fa-minus"></span>
+        </button>
+    </span>
+    <!-- Input -->
+    <input #q_input type="text" class="form-control input-number quantity-input" [value]="value" (keyup)="onChanged(q_input.value)">
+    <!-- + button -->
+    <span class="input-group-btn ">
+        <button type="button" class="btn btn-default btn-number btn-right" (click)="onPlus()">
+          <span class="fas fa-plus"></span>
+        </button>
+    </span>
+</div>
+
+
