@@ -1,0 +1,51 @@
+[
+  {
+      "id": 0,
+      "title": "Lacost bleue",
+      "price": "10.00",
+      "imageUrl": "assets/images/items/1.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Pull-over marron",
+    "price": "12.00",
+    "imageUrl": "assets/images/items/2.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Jean",
+    "price": "8.00",
+    "imageUrl": "assets/images/items/3.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Sac à dos",
+    "price": "13.00",
+    "imageUrl": "assets/images/items/4.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Macbook pro",
+    "price": "580.00",
+    "imageUrl": "assets/images/items/5.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Fauteuille",
+    "price": "134.00",
+    "imageUrl": "assets/images/items/6.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Apple watch",
+    "price": "299.00",
+    "imageUrl": "assets/images/items/7.jpg"
+  },
+  {
+    "id": 7,
+    "title": "LG Headphone",
+    "price": "150.00",
+    "imageUrl": "assets/images/items/9.jpg"
+  }
+
+]
