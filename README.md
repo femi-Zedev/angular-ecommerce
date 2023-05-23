@@ -8,7 +8,7 @@ Built with angular version 10.2 and it's dependencies
 
 ## Demo
 
-See [demo](https://arnaudakotonou97.github.io/angular-ecommerce)
+See [demo](https://femi-zedev.github.io/angular-ecommerce)
 
 
 ## 🚀 About Me
